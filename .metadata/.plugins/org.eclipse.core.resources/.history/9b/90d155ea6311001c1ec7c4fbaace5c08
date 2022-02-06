@@ -1,0 +1,8 @@
+package demo1;
+
+public class Exerse {
+	public static void main(String[] args) {
+		int[] num = new int[]{121,232,123,123};
+		System.out.print(num);
+	}
+}
