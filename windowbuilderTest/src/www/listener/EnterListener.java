@@ -12,7 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 import www.gui.EnterExercise;
-import www.test.testOne;
+import www.main.Main;
 
 public class EnterListener implements ActionListener{
 	EnterExercise ee;
@@ -37,7 +37,6 @@ public class EnterListener implements ActionListener{
 			try
 			{ 
 				Class.forName("com.mysql.jdbc.Driver");   //加载MYSQL JDBC驱动程序  
-				System.out.println("成功加载Mysql驱动程序!"); 
 			 } 
 			catch (Exception e1) 
 			{
@@ -48,7 +47,6 @@ public class EnterListener implements ActionListener{
 			{ 
 				Connection connect = DriverManager.getConnection( "jdbc:mysql://127.0.0.1:3306/jdbcTest?useSSL=false","root","123456");
 				//连接URL为  jdbc:mysql//服务器地址/数据库名 ，后面的2个参数分别是登陆用户名和密码 
-				System.out.println("成功连接Mysql服务器!");
 				String sql = "INSERT INTO exercises(content,answer1,answer2,answer3,answer4,right_answer) VALUES(?, ?,?,?,?,?);";
 //				获取pstmt对象
 				PreparedStatement pstmt = connect.prepareStatement(sql);
@@ -73,16 +71,15 @@ public class EnterListener implements ActionListener{
 			        ee.answerd.setText("");
 			        ee.answer.setText("");
 			   }else{
-			        System.out.println("录入失败~");
+				   JOptionPane.showMessageDialog(null, "录入失败！","成功",JOptionPane.INFORMATION_MESSAGE);
 			   }
+				connect.close();
 		     } 
 			catch (Exception e1) 
 			{ 
 				System.out.print("获取数据错误!");
 				e1.printStackTrace(); 
 			}
-		} else {
-			
 		}
 	}
 

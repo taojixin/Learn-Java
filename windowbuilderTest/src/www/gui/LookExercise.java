@@ -1,7 +1,6 @@
 package www.gui;
 
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
 
 import javax.swing.*;
 import javax.swing.JDialog;
@@ -16,18 +15,6 @@ public class LookExercise extends JDialog {
 	private JTable table;
 	Object[][] data = {{},{},{},{},{},{}};
 
-	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		try {
-//			LookExercise dialog = new LookExercise(data);
-//			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-//			dialog.setVisible(true);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
 
 	/**
 	 * Create the dialog.
@@ -39,10 +26,8 @@ public class LookExercise extends JDialog {
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
-		{
-			
-		}
-		Object[] titles = {"习题","选项1","选项2","选项3","选项4","答案"};
+//		表格列名
+		Object[] titles = {"题号","习题","选项1","选项2","选项3","选项4","答案"};
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(10, 10, 631, 210);

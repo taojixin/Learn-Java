@@ -9,16 +9,12 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import www.listener.JRBListener;
-import www.listener.ListenerEvent;
 import www.listener.WriteListener;
 
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextPane;
 import javax.swing.JRadioButton;
-import javax.swing.SwingConstants;
-import javax.swing.JRadioButtonMenuItem;
 import java.awt.Color;
 
 public class GenerateTest extends JDialog {
@@ -28,22 +24,11 @@ public class GenerateTest extends JDialog {
 	public JRadioButton answer3;
 	public JRadioButton answer4;
 	public JLabel lblNewLabel;
+	public ButtonGroup group;
 	
 	Object[][] data;
 	private final JPanel contentPanel = new JPanel();
 
-	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		try {
-//			GenerateTest dialog = new GenerateTest();
-//			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-//			dialog.setVisible(true);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
 
 	/**
 	 * Create the dialog.
@@ -51,13 +36,8 @@ public class GenerateTest extends JDialog {
 	public GenerateTest(Object[][] data) {
 		
 		this.data = data;
-		for (int a = 0; a < this.data.length; a++) {
-			System.out.println(this.data[a][0]);
-		}
 		
 		WriteListener listener = new WriteListener(this,this.data);//监听器
-//		单选按钮监听器
-		JRBListener listener2 = new JRBListener(this,this.data);//监听器
 		
 		setBounds(100, 100, 693, 431);
 		getContentPane().setLayout(new BorderLayout());
@@ -81,30 +61,30 @@ public class GenerateTest extends JDialog {
 		contentPanel.add(textPane);
 //		A选项
 		answer1 = new JRadioButton("A：" + this.data[0][1]);
-		answer1.addActionListener(listener2);//注册事件
+//		answer1.addActionListener(listener);//注册事件
 		answer1.setFont(new Font("宋体", Font.PLAIN, 20));
 		answer1.setBounds(100, 206, 186, 46);
 		contentPanel.add(answer1);
 //		B选项
 		answer2 = new JRadioButton("B：" + this.data[0][2]);
-		answer2.addActionListener(listener2);//注册事件
+//		answer2.addActionListener(listener);//注册事件
 		answer2.setFont(new Font("宋体", Font.PLAIN, 20));
 		answer2.setBounds(376, 206, 186, 46);
 		contentPanel.add(answer2);
 //		C选项
 		answer3 = new JRadioButton("C：" + this.data[0][3]);
-		answer3.addActionListener(listener2);//注册事件
+//		answer3.addActionListener(listener);//注册事件
 		answer3.setFont(new Font("宋体", Font.PLAIN, 20));
 		answer3.setBounds(100, 269, 186, 46);
 		contentPanel.add(answer3);
 //		D选项
 		answer4 = new JRadioButton("D：" + this.data[0][4]);
-		answer4.addActionListener(listener2);//注册事件
+//		answer4.addActionListener(listener);//注册事件
 		answer4.setFont(new Font("宋体", Font.PLAIN, 20));
 		answer4.setBounds(376, 269, 186, 46);
 		contentPanel.add(answer4);
 //		单选按钮组
-		ButtonGroup group = new ButtonGroup();
+		group = new ButtonGroup();
 		group.add(answer1);
 		group.add(answer2);
 		group.add(answer3);

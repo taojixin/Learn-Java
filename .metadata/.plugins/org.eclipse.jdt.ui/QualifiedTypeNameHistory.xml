@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="five.UserCompute"/>
-    <fullyQualifiedTypeName name="five1.MaxComDiv"/>
-    <fullyQualifiedTypeName name="org.ngweb.drawing.shapes.MyLocation"/>
-    <fullyQualifiedTypeName name="org.ngweb.drawing.shapes.MyShape"/>
-    <fullyQualifiedTypeName name="guessnumber.MyListener"/>
-    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
-    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
-    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
     <fullyQualifiedTypeName name="java.awt.Color"/>
     <fullyQualifiedTypeName name="view.SimpleWindow"/>
     <fullyQualifiedTypeName name="controller.Monitor"/>
@@ -43,7 +35,6 @@
     <fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="www.mysql.ConnMysql"/>
-    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="www.test.testOne"/>
     <fullyQualifiedTypeName name="javax.swing.JButton"/>
     <fullyQualifiedTypeName name="www.listener.ListenerEvent"/>
@@ -60,4 +51,13 @@
     <fullyQualifiedTypeName name="java.util.Enumeration"/>
     <fullyQualifiedTypeName name="javax.swing.AbstractButton"/>
     <fullyQualifiedTypeName name="javax.swing.ButtonGroup"/>
+    <fullyQualifiedTypeName name="www.utils.GroupButtonUtils"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="www.gui.GradeResult"/>
+    <fullyQualifiedTypeName name="www.listener.GradeListener"/>
+    <fullyQualifiedTypeName name="www.gui.GradeView"/>
+    <fullyQualifiedTypeName name="www.listener.DeleteListener"/>
+    <fullyQualifiedTypeName name="www.gui.DeleteExercise"/>
+    <fullyQualifiedTypeName name="www.listener.ModifyListener"/>
+    <fullyQualifiedTypeName name="www.gui.ModifyExercise"/>
 </qualifiedTypeNameHistroy>

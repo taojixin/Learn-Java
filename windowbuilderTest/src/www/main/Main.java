@@ -1,6 +1,4 @@
-package www.test;
-
-import java.awt.EventQueue;
+package www.main;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -10,7 +8,6 @@ import www.gui.GenerateTest;
 import www.gui.LookExercise;
 import www.listener.ListenerEvent;
 
-import javax.swing.*;
 import java.awt.Font;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,7 +15,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.awt.Color;
 
-public class testOne extends JFrame {
+public class Main extends JFrame {
 
 	private JPanel contentPane;
 	public JTextField enterNum;
@@ -61,27 +58,20 @@ public class testOne extends JFrame {
 		     }
 		    connect.close();
 		    System.out.println("关闭连接");
-		    testOne frame = new testOne(data);
+		    Main frame = new Main(data);
 		    frame.setVisible(true);
 	     } 
 		catch (Exception e) 
 		{ 
 			System.out.print("获取数据错误!");
 			e.printStackTrace(); 
-		}
-		
-		
-		
-//		
-		
-		
+		}	
 	}
 
 	/**
 	 * Create the frame.
 	 */
-	public testOne(Object[][] data) {
-		Object[][] data1 = data;
+	public Main(Object[][] data) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 691, 469);
 		contentPane = new JPanel();
@@ -101,46 +91,52 @@ public class testOne extends JFrame {
 		JButton addExercise = new JButton("录入试题");
 		addExercise.addActionListener(listener);//注册事件
 		addExercise.setFont(new Font("宋体", Font.PLAIN, 27));
-		addExercise.setBounds(359, 115, 155, 56);
+		addExercise.setBounds(140, 167, 150, 56);
 		contentPane.add(addExercise);
 //		所有试题
 		JButton lookExercise = new JButton("所有试题");
 		lookExercise.addActionListener(listener);//注册事件
 		lookExercise.setFont(new Font("宋体", Font.PLAIN, 27));
-		lookExercise.setBounds(158, 115, 155, 56);
+		lookExercise.setBounds(140, 90, 150, 56);
 		contentPane.add(lookExercise);
+//		删除试题
+		JButton deleteExercise = new JButton("删除试题");
+		deleteExercise.addActionListener(listener);//注册事件
+		deleteExercise.setFont(new Font("宋体", Font.PLAIN, 27));
+		deleteExercise.setBounds(386, 90, 150, 56);
+		contentPane.add(deleteExercise);
 //		生成试题
 		JButton generateTest = new JButton("生成试题");
 		generateTest.addActionListener(listener);//注册事件
 		generateTest.setFont(new Font("宋体", Font.PLAIN, 27));
-		generateTest.setBounds(471, 233, 155, 56);
+		generateTest.setBounds(453, 255, 155, 56);
 		contentPane.add(generateTest);
 //		试题抽取提示
-		JLabel labelTest = new JLabel("试题抽取：");
+		JLabel labelTest = new JLabel("试题抽取数：");
 		labelTest.setFont(new Font("宋体", Font.PLAIN, 27));
-		labelTest.setBounds(117, 241, 155, 40);
+		labelTest.setBounds(92, 263, 174, 40);
 		contentPane.add(labelTest);
 //		试题抽取输入
 		enterNum = new JTextField();
-		enterNum.setText("请输入试题数");
+//		enterNum.setText("请输入试题数");
 		enterNum.setToolTipText("");
-		enterNum.setBounds(244, 241, 206, 40);
+		enterNum.setBounds(253, 268, 174, 40);
 		contentPane.add(enterNum);
 		enterNum.setColumns(10);
 //		退出系统
 		JButton exitSystem = new JButton("退出系统");
+		exitSystem.addActionListener(listener);//注册事件
 		exitSystem.setFont(new Font("宋体", Font.PLAIN, 25));
 		exitSystem.setBounds(272, 340, 155, 50);
 		contentPane.add(exitSystem);
-//		查看试题对话框
-//		dialog1 = new LookExercise(data1);
-//		dialog1.setVisible(false);
+//		修改试题
+		JButton deleteExercise_1 = new JButton("修改试题");
+		deleteExercise_1.addActionListener(listener);//注册事件
+		deleteExercise_1.setFont(new Font("宋体", Font.PLAIN, 27));
+		deleteExercise_1.setBounds(386, 167, 150, 56);
+		contentPane.add(deleteExercise_1);
 //		录入试题对话框
 		dialog2 = new EnterExercise();
 		dialog2.setVisible(false);
-//		生成试题
-//		dialog3 = new GenerateTest();
-//		dialog3.setVisible(false);
 	}
-
 }

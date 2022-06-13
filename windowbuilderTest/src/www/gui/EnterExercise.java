@@ -1,7 +1,6 @@
 package www.gui;
 
 import www.listener.EnterListener;
-import www.listener.ListenerEvent;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 
@@ -10,7 +9,6 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import www.listener.ListenerEvent;
 
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -27,18 +25,6 @@ public class EnterExercise extends JDialog {
 	public JTextField answerd;
 	public JTextField answer;
 
-	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		try {
-//			EnterExercise dialog = new EnterExercise();
-//			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-//			dialog.setVisible(true);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
 
 	/**
 	 * Create the dialog.
@@ -55,11 +41,11 @@ public class EnterExercise extends JDialog {
 //		请输入题目
 		JLabel lblNewLabel = new JLabel("请输入题目：");
 		lblNewLabel.setFont(new Font("宋体", Font.PLAIN, 20));
-		lblNewLabel.setBounds(51, 43, 120, 37);
+		lblNewLabel.setBounds(51, 51, 120, 37);
 		contentPanel.add(lblNewLabel);
 //		题目
 		textField = new JTextField();
-		textField.setBounds(165, 43, 416, 37);
+		textField.setBounds(173, 53, 416, 37);
 		contentPanel.add(textField);
 		textField.setColumns(10);
 //		请输入选项
@@ -124,6 +110,11 @@ public class EnterExercise extends JDialog {
 		answer.setColumns(10);
 		answer.setBounds(369, 111, 149, 39);
 		contentPanel.add(answer);
+		
+		JLabel lblNewLabel_3 = new JLabel("录入试题");
+		lblNewLabel_3.setFont(new Font("宋体", Font.PLAIN, 20));
+		lblNewLabel_3.setBounds(276, 10, 105, 37);
+		contentPanel.add(lblNewLabel_3);
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
