@@ -32,6 +32,8 @@ public class GradeView extends JDialog {
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(10, 70, 667, 272);
 		getContentPane().add(scrollPane);
+//		窗口居中
+		setLocationRelativeTo(null);
 		
 //		表格列名
 		Object[] titles = {"习题","选项A","选项B","选项C","选项D","答案","我的选项"};

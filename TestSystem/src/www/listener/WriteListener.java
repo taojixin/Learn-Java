@@ -29,10 +29,8 @@ public class WriteListener implements ActionListener{
 		String selectAnswer = groupBtn.getSelectedButtonText(gt.group).split("：")[1];
 		//判断点击的是哪个按钮
 		if(str.equals("下一题")) {
-//			String ifRight = gt.answer1
 //			更改题目
 			if(num < this.data.length) {
-//				System.out.println(num);
 				gt.textPane.setText((String) data[num][0]);
 				gt.answer1.setText("A：" + (String) data[num][1]);
 				gt.answer2.setText("B：" + (String) data[num][2]);

@@ -1,21 +1,24 @@
-package www.main;
+package www.gui;
 
-import javax.swing.*;
-import javax.swing.border.EmptyBorder;
-
-import www.gui.EnterExercise;
-import www.gui.GenerateTest;
-import www.gui.LookExercise;
-import www.listener.ListenerEvent;
-
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.EventQueue;
 import java.awt.Font;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.awt.Color;
 
-public class Main extends JFrame {
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+import www.listener.ListenerEvent;
+
+public class Home extends JFrame {
 
 	private JPanel contentPane;
 	public JTextField enterNum;
@@ -23,10 +26,13 @@ public class Main extends JFrame {
 	public EnterExercise dialog2;
 	public GenerateTest dialog3;
 
+
+
 	/**
-	 * Launch the application.
+	 * Create the frame.
 	 */
-	public static void main(String[] args) {
+	public Home() {
+		Object[][] data;
 //		连接数据库
 		try
 		{ 
@@ -45,7 +51,7 @@ public class Main extends JFrame {
 			System.out.println("成功连接Mysql服务器!");
 			Statement stmt = connect.createStatement(); 
 			ResultSet rs = stmt.executeQuery("SELECT * FROM exercises;");
-			Object[][] data = new Object[100][6];
+			data = new Object[100][6];
 		    while (rs.next())
 			 { 
 		    	int num = rs.getInt("id");
@@ -58,26 +64,23 @@ public class Main extends JFrame {
 		     }
 		    connect.close();
 		    System.out.println("关闭连接");
-		    Main frame = new Main(data);
-		    frame.setVisible(true);
+//		    Home frame = new Home(data);
+//		    frame.setVisible(true);
 	     } 
 		catch (Exception e) 
 		{ 
 			System.out.print("获取数据错误!");
 			e.printStackTrace(); 
-		}	
-	}
-
-	/**
-	 * Create the frame.
-	 */
-	public Main(Object[][] data) {
+		}
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 691, 469);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+//		窗口居中
+		setLocationRelativeTo(null);
 		
 		ListenerEvent listener = new ListenerEvent(this);//监听器
 		
@@ -139,4 +142,5 @@ public class Main extends JFrame {
 		dialog2 = new EnterExercise();
 		dialog2.setVisible(false);
 	}
+
 }

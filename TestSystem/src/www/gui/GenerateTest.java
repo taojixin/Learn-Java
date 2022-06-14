@@ -51,6 +51,8 @@ public class GenerateTest extends JDialog {
 			contentPanel.add(lblNewLabel);
 		}
 
+//		窗口居中
+		setLocationRelativeTo(null);
 //		题目展示文本
 		textPane = new JTextPane();
 		textPane.setForeground(Color.BLACK);

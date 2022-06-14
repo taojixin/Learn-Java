@@ -42,6 +42,8 @@ public class ModifyExercise extends JDialog {
 			lblNewLabel.setBounds(200, 10, 92, 42);
 			contentPanel.add(lblNewLabel);
 		}
+//		窗口居中
+		setLocationRelativeTo(null);
 //		请输入试题号
 		JLabel lblNewLabel_1 = new JLabel("请输入试题号：");
 		lblNewLabel_1.setFont(new Font("宋体", Font.PLAIN, 15));

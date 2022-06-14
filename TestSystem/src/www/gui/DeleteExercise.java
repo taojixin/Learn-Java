@@ -28,6 +28,8 @@ public class DeleteExercise extends JDialog {
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
+//		窗口居中
+		setLocationRelativeTo(null);
 		
 		DeleteListener listener = new DeleteListener(this);//监听器
 		

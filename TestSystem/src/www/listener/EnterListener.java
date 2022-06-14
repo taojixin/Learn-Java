@@ -12,7 +12,6 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 import www.gui.EnterExercise;
-import www.main.Main;
 
 public class EnterListener implements ActionListener{
 	EnterExercise ee;

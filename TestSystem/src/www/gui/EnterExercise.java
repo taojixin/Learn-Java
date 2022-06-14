@@ -35,6 +35,8 @@ public class EnterExercise extends JDialog {
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
+//		窗口居中
+		setLocationRelativeTo(null);
 		
 		EnterListener listener = new EnterListener(this);//监听器
 		

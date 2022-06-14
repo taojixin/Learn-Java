@@ -12,14 +12,14 @@ import javax.swing.*;
 
 import www.gui.DeleteExercise;
 import www.gui.GenerateTest;
+import www.gui.Home;
 import www.gui.LookExercise;
 import www.gui.ModifyExercise;
-import www.main.Main;
 
 public class ListenerEvent implements ActionListener{
-	Main f;
-	public ListenerEvent(Main ts) {
-		f = ts;
+	Home f;
+	public ListenerEvent(Home home) {
+		f = home;
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {

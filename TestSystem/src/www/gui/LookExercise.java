@@ -26,6 +26,8 @@ public class LookExercise extends JDialog {
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
+//		窗口居中
+		setLocationRelativeTo(null);
 //		表格列名
 		Object[] titles = {"题号","习题","选项1","选项2","选项3","选项4","答案"};
 		
