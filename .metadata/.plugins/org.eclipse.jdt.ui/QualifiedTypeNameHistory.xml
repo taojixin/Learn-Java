@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="model.Caculator"/>
-    <fullyQualifiedTypeName name="java.awt.event.MouseAdapter"/>
-    <fullyQualifiedTypeName name="java.awt.event.AdjustmentListener"/>
-    <fullyQualifiedTypeName name="java.awt.event.MouseListener"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.io.Serializable"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
-    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
-    <fullyQualifiedTypeName name="java.awt.GridBagLayout"/>
-    <fullyQualifiedTypeName name="java.awt.GridLayout"/>
-    <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
-    <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
-    <fullyQualifiedTypeName name="view.Frame"/>
-    <fullyQualifiedTypeName name="java.io.FileWriter"/>
-    <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="model.Student"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
@@ -60,4 +44,20 @@
     <fullyQualifiedTypeName name="www.listener.LoginListener"/>
     <fullyQualifiedTypeName name="www.gui.Home"/>
     <fullyQualifiedTypeName name="www.gui.Login"/>
+    <fullyQualifiedTypeName name="www.listener.SelectListener"/>
+    <fullyQualifiedTypeName name="www.gui.InputNum"/>
+    <fullyQualifiedTypeName name="www.listener.InputListener"/>
+    <fullyQualifiedTypeName name="www.gui.Select"/>
+    <fullyQualifiedTypeName name="gui.Login"/>
+    <fullyQualifiedTypeName name="Listener.LoginListener"/>
+    <fullyQualifiedTypeName name="Listener.HomeListener"/>
+    <fullyQualifiedTypeName name="Listener.AddStuListener"/>
+    <fullyQualifiedTypeName name="gui.AddStu"/>
+    <fullyQualifiedTypeName name="Listener.DelListener"/>
+    <fullyQualifiedTypeName name="gui.DelStu"/>
+    <fullyQualifiedTypeName name="Listener.ModiListener"/>
+    <fullyQualifiedTypeName name="gui.ModiStu"/>
+    <fullyQualifiedTypeName name="javax.swing.JDialog"/>
+    <fullyQualifiedTypeName name="gui.CheckStu"/>
+    <fullyQualifiedTypeName name="gui.Home"/>
 </qualifiedTypeNameHistroy>

@@ -5,7 +5,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class MyListener implements ActionListener{
-	private int ran = (int)(1+1000*Math.random());//用于生成随机的1到1000的数
+	private int ran = (int)(1+10000*Math.random());//用于生成随机的1到1000的数
 	private int a = 0;//用于记录猜测了多少次
 	MyFrame f;//存放窗口的相关信息
 	
